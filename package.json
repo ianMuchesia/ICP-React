@@ -1,0 +1,39 @@
+{
+  "name": "dfinity_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup": "dfx canister create backend && dfx generate backend && dfx deploy",
+    "start": "run-p frontend",
+    "frontend": "vite --port 3000",
+    "backend": "dfx deploy backend",
+    "build": "tsc && vite build"
+  },
+  "dependencies": {
+    "@dfinity/agent": "^0.15.6",
+    "@dfinity/candid": "^0.15.6",
+    "@testing-library/jest-dom": "^6.1.3",
+    "@types/react": "^18.2.24",
+    "@types/react-dom": "^18.2.8",
+    "@vitejs/plugin-react": "^4.1.0",
+    "azle": "0.16.2",
+    "dotenv": "^16.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "uuid": "^9.0.0",
+    "vite": "^4.4.9",
+    "vite-plugin-environment": "^1.1.3",
+    "vitest": "^0.34.6"
+  },
+  "engines": {
+    "node": "^12 || ^14 || ^16 || ^18"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/uuid": "^9.0.1"
+  }
+}
